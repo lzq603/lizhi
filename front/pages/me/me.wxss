@@ -1,0 +1,37 @@
+/* pages/me/me.wxss */
+/*页面头部*/
+.header{
+  background-color: #ff534d;
+  display: flex;
+  direction: right;
+  justify-content:space-between;
+  align-items: center;
+  color: white;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+}
+
+/*测试框*/
+.test_border{
+  border:solid 1rpx white;
+}
+
+/*个人页面选项*/
+.setting_list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20rpx;
+  padding: 20rpx 0;
+  align-items: center;
+  height: 50rpx;
+  align-content: center;
+  border-bottom: solid 2rpx #eeeeee;
+}
+.setting_list .m{
+  display: flex;
+  align-items: center;
+}
+.m image{
+  margin-right: 10rpx;
+}

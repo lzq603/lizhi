@@ -1,0 +1,37 @@
+<!--pages/search_result/search_result.wxml-->
+<!-- 搜索框 -->
+<view class='search_box'>
+  <input type='text' value='{{key_word}}' bindconfirm='search' confirm-type='search'></input>
+</view>
+
+<!-- 选项 -->
+<view class='options'>
+  <view>最新发布</view>
+  <view bindtap='unfoldCatagory'>
+    <text>分类</text>
+    <text wx:if='{{unfoldCatagory}}'>∧</text>
+    <text wx:else>∨</text>
+  </view>
+  <view bindtap='filter'>筛选</view>
+</view>
+<view wx:if='{{unfoldCatagory}}' class='catagory'>
+  <block wx:for='{{catagroyList}}'>
+  <!-- <view>{{catagory}}{{item}}</view> -->
+  <view wx:if='{{condition.catagory == item || condition.catagory== "" && item == "全部"}}' data-catagory='{{item}}' bindtap='setCatagory' class='selected'>{{item}}</view>
+  <view wx:else data-catagory='{{item}}' bindtap='setCatagory'>{{item}}</view>
+  </block>
+</view>
+<!-- 搜索结果列表 -->
+<view>
+  <view class='good_box' wx:for='{{goods}}'>
+    <navigator  url='/pages/good/good?goodId={{item.goodId}}'>
+      <image src='{{appInstance.globalData.host + "img/goods/" + item.images}}' mode='scaleToFill'></image>
+      <view class='name'>{{item.goodName}}</view>
+      <view class='price'>
+        <text style='color:red;'>￥{{item.price}}</text>
+        <text class='noemphasize'>{{item.goodOwner.nickname}}</text>
+      </view>
+    </navigator>
+  </view>
+  <view style='text-align:center;padding:20rpx 0;'>{{tip}}</view>
+</view>

@@ -1,0 +1,116 @@
+<!--pages/good/good.wxml-->
+<view>
+  <!-- 头像、昵称、时间 -->
+  <view class='title'>
+    <image src='{{good.goodOwner.head}}' class='head'></image>
+    <view>
+      <text style='font-size:38rpx;font-weight:bold'>{{good.goodOwner.nickname}}</text>
+      <text class='noemphasize'>{{good.time}}</text>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view style='padding-left:16rpx;padding-right:16rpx;background:white'>
+    <view class='divide_line'></view>
+  </view>
+
+  <!-- 价格 -->
+  <view class='price'>
+    <text>￥{{good.price}}</text>
+    <text class='preprice'>￥8</text>
+  </view>
+
+  <!-- 描述 -->
+  <view class='description'>
+    <text>{{good.description}}</text>
+  </view>
+
+  <!-- 图片 -->
+  <view class='imgs'>
+    <image data-imgUrl='{{item}}' bindtap='viewImage' mode='scaleToFill' wx:for='{{goodImgs}}' src='{{item}}'></image>
+  </view>
+
+  <!-- 分割线 -->
+  <view style='background:white;padding:16rpx'>
+    <view class='divide_line'></view>
+  </view>
+
+  <!-- 交易方式、收藏 -->
+  <view class='good_bottom'>
+    <text class='method'>见面交易</text>
+    <image bindtap='unCollect' wx:if='{{isCollect}}' src='/image/star-fill.png' style='width:36px;height:32px'></image>
+    <image bindtap='collect' wx:else src='/image/star.png' style='width:36px;height:32px'></image>
+    <text class='noemphasize'>收藏{{good.collect}}</text>
+  </view>
+
+  <!-- 用户信息 -->
+  <view class='ownerInfo'>
+    <view>
+      <text style='font-size:36rpx;font-weight:bold'>{{good.goodOwner.nickname}}</text>
+      <text style='font-size:32rpx'>{{"来自" + good.goodOwner.college + "，卖出过0件宝贝"}}</text>
+      <text style='font-size:32rpx'>{{"这家伙很懒，什么都没有留下"}}</text>
+    </view>
+    <view style='text-align:center;'>
+      <image src='{{good.goodOwner.head}}' class='head'></image>
+      <view style='display:flex;align-items:center;'>
+        <image style='width:40rpx;height:40rpx;' src='/image/vertify.png'></image>
+        <view style='color:blue;'>学生认证</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 留言板块 -->
+  <view class='msgTitle'>
+    <text style='font-size:36rpx;font-weight:bold'>留言</text>
+  </view>
+
+  <!-- 分割线 -->
+  <view style='background:white;padding:16rpx'>
+    <view class='divide_line'></view>
+  </view>
+
+  <view wx:if="{{msgList.length == 0}}" class='msgBoard'>
+    <text style='color:#cdcdcd;font-size:36rpx;'>还没有人留言，还不快来抢沙发</text>
+    <view class="leave_msg" bindtap='leave_msg'>留言</view>
+  </view>
+  <view wx:else>
+    <block wx:for='{{msgList}}'>
+      <view class='opposite'>
+        <image class='head' src='{{item.send.head}}' style='width:70rpx;height:70rpx;'></image>
+        <view class='limit'>
+          <view class='right'>
+            <view class='nickname'>{{item.send.nickname}}</view>
+            <view class='content' style='float:left'>{{item.content}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 页面底部 -->
+  <view class='noemphasize bottom'>
+    底部了哟~
+  </view>
+
+  <!-- 固定底部功能 -->
+
+  <form bindsubmit='send'>
+    <view wx:if='{{leave_msg}}' class='fix_bottom'>
+      <image src='/image/down.png' bindtap='cancel_msg'></image>
+
+      <input name="content" type='text' value='{{tempMsg}}' placeholder='看对眼就留言，问问更多细节~'></input>
+
+      <button form-type='submit' class='send' style='margin-right:50rpx'>发送</button>
+
+    </view>
+  </form>
+
+  <view wx:if='{{!leave_msg}}' class='fix_bottom'>
+    <view class='good_opt' style='font-size:36rpx;'>
+      <image src='/image/leave_msg.png' style='width:50rpx;height:50rpx;'></image><text class='leave_message' bindtap='leave_msg' space='true' decode='true'>留言&nbsp;&nbsp;</text>
+      <image src='/image/collect.png' style='width:50rpx;height:50rpx;'></image><text bindtap='collect' class='collect'>收藏</text>
+    </view>
+    <view>
+      <view class='want' style='margin-right:50rpx' bindtap='chat'>我想要</view>
+    </view>
+  </view>
+</view>

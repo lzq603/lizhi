@@ -1,0 +1,68 @@
+<!--pages/update_userInfo/update_userInfo.wxml-->
+<view>
+  <!--  个人信息列表 -->
+  <view class='setting_list'>
+
+    <view class='setting_item'>
+      <view>头像</view>
+      <view>
+        <image src='{{userInfo.avatarUrl}}' class='head' style='margin-left: 40rpx;'></image>
+      </view>
+    </view>
+    <view class='divide_line'></view>
+
+    <view class='setting_item'>
+      <view>ID</view>
+      <view>{{userInfo.userId}}</view>
+    </view>
+    <view class='divide_line'></view>
+
+    <navigator url='./nick/nick'>
+      <view class='setting_item'>
+        <view>昵称：</view>
+        <view>{{userInfo.nickName}}></view>
+      </view>
+    </navigator>
+    <view class='divide_line'></view>
+
+    <view class='setting_item' bindtap='selectSex'>
+      <view>性别</view>
+      <view wx:if='{{userInfo.gender}}'>男></view>
+      <view wx:else>女></view>
+    </view>
+    <view class='divide_line'></view>
+
+    <view class='setting_item'>
+      <view>学校</view>
+      <view wx:if='{{userInfo.college == null || userInfo.college == "null"}}'>未填写</view>
+      <view wx:else>{{userInfo.college}}</view>
+    </view>
+    <view class='divide_line'></view>
+
+    <navigator url='./stuid/stuid'>
+      <view class='setting_item'>
+        <view>学号</view>
+        <view wx:if='{{userInfo.userName == null || userInfo.userName == "null"}}'>未填写</view>
+        <view wx:else>{{userInfo.userName}}></view>
+      </view>
+    </navigator>
+    <view class='divide_line'></view>
+
+    <navigator url='/pages/update_userInfo/phone/phone'>
+      <view class='setting_item'>
+        <view>手机</view>
+        <view wx:if='{{userInfo.mobilePhone == null || userInfo.mobilePhone == "null"}}'>未填写</view>
+        <view wx:else>{{userInfo.mobilePhone}}></view>
+      </view>
+    </navigator>
+    <view class='divide_line'></view>
+
+    <navigator url='/pages/update_userInfo/addr/addr'>
+      <view class='setting_item'>
+        <view>住址</view>
+        <view wx:if='{{userInfo.address == null}}'>未填写</view>
+        <view wx:else>{{userInfo.address}}></view>
+      </view>
+    </navigator>
+  </view>
+</view>

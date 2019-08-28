@@ -1,0 +1,23 @@
+<!--pages/released_goods/released.wxml-->
+<view class='list_item' wx:for='{{goods}}'>
+  <navigator url='/pages/good/good?goodId={{item.goodId}}'>
+    <view class='list_item_up'>
+      <image src='{{appInstance.globalData.host + "img/goods/" + item.images}}'></image>
+      <view class='detail'>
+        <view style='font-family:微软雅黑;font-weight:bold'>{{item.goodName}}</view>
+        <view style='color:red;font-weight:bold'>￥{{item.price}}</view>
+        <view class='noemphasize'>{{item.leave_msg}}留言 {{item.collect}}收藏</view>
+      </view>
+    </view>
+  </navigator>
+
+  <view class='divide_line' style='margin-top:14rpx;margin-bottom:14rpx'></view>
+  <view class='btn_box'>
+    <view>
+      <button open-type="share"  data-good='{{item}}'>分享</button>
+    </view>
+    <view>
+      <button bindtap='showMenu' data-goodId='{{item.goodId}}'>●●●</button>
+    </view>
+  </view>
+</view>

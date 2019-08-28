@@ -1,0 +1,27 @@
+<!--pages/msg/msg.wxml-->
+<view>
+  <navigator bindlongtap='showMenu' wx:for='{{msgList}}' wx:if='{{item.send.userid == appInstance.globalData.userInfo.userId}}' url='/pages/chat/chat?sendId={{item.receive.userid}}&sendUser={{item.receive.username}}&sendNick={{item.receive.nickname}}&goodId={{item.good.goodId}}'>
+    <view class='list_item'>
+      <image src='{{item.receive.head}}' class='head'></image>
+      <view class='detail'>
+        <view>
+          <view>{{item.receive.nickname}}</view>
+          <view>{{content}}</view>
+        </view>
+        <image src='{{appInstance.globalData.host + "img/goods/" + item.good.images}}' class='goodImg'></image>
+      </view>
+    </view>
+  </navigator>
+  <navigator bindlongtap='showMenu' wx:for='{{msgList}}' wx:if='{{item.send.userid != appInstance.globalData.userInfo.userId}}' url='/pages/chat/chat?sendId={{item.send.userid}}&sendUser={{item.send.username}}&sendNick={{item.send.nickname}}&goodId={{item.good.goodId}}'>
+    <view class='list_item'>
+      <image src='{{item.send.head}}' class='head'></image>
+      <view class='detail'>
+        <view>
+          <view>{{item.send.nickname}}</view>
+          <view>{{content}}</view>
+        </view>
+        <image src='{{appInstance.globalData.host + "img/goods/" + item.good.images}}' class='goodImg'></image>
+      </view>
+    </view>
+  </navigator>
+</view>

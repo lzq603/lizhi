@@ -1,0 +1,18 @@
+/* pages/update_userInfo/update_userInfo.wxss */
+page{
+  background-color: #eeeeee;
+}
+.setting_list{
+  background-color: #fefefe;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+.setting_item{
+  padding: 10rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 微软雅黑;
+}

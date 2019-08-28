@@ -1,0 +1,13 @@
+/* pages/update_userInfo/stuid/stuid.wxss */
+page{
+  background-color: #eeeeee;
+}
+input{
+  margin-top: 20rpx;
+  background-color: white;
+  height: 80rpx;
+  padding: 20rpx;
+}
+button{
+  margin-top: 20rpx;
+}

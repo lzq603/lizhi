@@ -1,0 +1,64 @@
+/* pages/shopchart/shopchart.wxss */
+page{
+  background-color: #eeeeee;
+  height: 100%;
+}
+
+/*每个列表项*/
+.list_item{
+  margin: 20rpx 0;
+  background-color: white;
+}
+.list_item_up{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list_item_up image{
+  width: 200rpx;
+  height: 200rpx;
+  padding: 30rpx;
+}
+
+.detail{
+  width: 550rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+button{
+  border-radius: 0;
+  border: solid 1px #eeeeee;
+  margin: 5rpx 20rpx 20rpx;
+  font-size: 18rpx;
+  padding: 10rpx 25rpx;
+}
+button::after{
+  border-radius: 0;
+  border: solid 1px #eeeeee;
+  margin: 5rpx 20rpx 20rpx;
+}
+
+.empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+}
+.empty image{
+  width: 49%;
+  height: 32%;
+  margin-left: auto;
+  margin-right: auto;
+}

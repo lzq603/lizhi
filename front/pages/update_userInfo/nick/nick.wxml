@@ -1,0 +1,7 @@
+<!--pages/update_userInfo/nick/nick.wxml-->
+<view>
+  <form bindsubmit='updateNick'>
+    <input type='text' name="nickname" maxlength='8' placeholder='请输入你的昵称' value='{{appInstance.globalData.userInfo.nickName}}'></input>
+    <button form-type='submit'>修改</button>
+  </form>
+</view>

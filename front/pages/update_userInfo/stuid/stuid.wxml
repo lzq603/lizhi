@@ -1,0 +1,8 @@
+<view>
+  <form bindsubmit='bindsid'>
+    <input type='number' name="username" maxlength='8' placeholder='请输入你的学号' value='{{myCard.stuid}}'></input>
+    <input type='number' name="password" maxlength='6' placeholder='请输入校园卡密码' value='{{myCard.password}}' password='{{true}}'></input>
+    <button form-type='submit'>绑定学号</button>
+    <!-- <button bindtap='fillTest'>一键填入测试账号</button> -->
+  </form>
+</view>

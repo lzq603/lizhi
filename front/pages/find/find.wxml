@@ -1,0 +1,4 @@
+<!--pages/find/find.wxml-->
+<view>
+  <web-view src="https://www.24kdh.com/"></web-view>
+</view>

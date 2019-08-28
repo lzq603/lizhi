@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#eeeeee",
+  "navigationBarTitleText": "消息",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true
+}

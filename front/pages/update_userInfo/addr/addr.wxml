@@ -1,0 +1,7 @@
+<!--pages/update_userInfo/addr/addr.wxml-->
+<view>
+  <form bindsubmit='updateAddr'>
+    <input type='text' name="address" maxlength='20' placeholder='请输入你的地址' value='{{appInstance.globalData.userInfo.address}}'></input>
+    <button form-type='submit'>保存</button>
+  </form>
+</view>

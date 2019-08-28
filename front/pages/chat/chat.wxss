@@ -1,0 +1,61 @@
+/* pages/chat/chat.wxss */
+
+page{
+  background-color: #eeeeee;
+}
+.opposite,.self{
+  display: flex;
+  margin: 30rpx 20rpx;
+}
+.self{
+  flex-direction: row-reverse;
+}
+.right , .left{
+  display: flex-inline;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.nickname{
+  color: #212323;
+  font-size: 28rpx;
+}
+.content{
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+.left .content,.left .nickname{
+  text-align: right;
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  display:flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  width: 100%;
+}
+#sendBtn{
+  background:none;
+  background-color: yellow;
+  width: 150rpx;
+  margin: 0;
+  padding: 10rpx 0;
+  font-size: 24rpx;
+  border-radius: 0;
+}
+#sendBtn::after{
+  border-radius: 0;
+}
+.limit{
+  width: 516rpx;
+}
+
+.time{
+  text-align:center;
+  margin:20rpx 0;
+  color:#909090;
+  font-size:32rpx;
+}

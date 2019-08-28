@@ -1,0 +1,67 @@
+/* pages/index/index.wxss */
+page{
+  background-color: #eeeeee;
+}
+
+/*首页功能菜单*/
+
+.menu{
+  background-color: #fdfdfd;
+}
+.function{
+  display: inline-flex;
+  width: 187rpx;
+  flex-direction:column;
+  align-items: center;
+  justify-content:space-between;
+  margin-top: 16rpx;
+}
+.function image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.function text{
+  font-size: 28rpx
+}
+/*搜索框*/
+#search_box{
+  background-color: #ffffff;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#search_box image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}
+#search_box input{
+  height: 80rpx;
+  width: 100%;
+  margin-left: 10rpx;
+}
+
+/*主页商品展示区*/
+.home_good{
+  background:#fdfdfd;
+  padding: 20rpx;
+}
+.home_good #newest{
+  border-bottom: solid 1px firebrick;
+  display: block;
+}
+.good{
+  display: flex;
+  flex-direction: row;
+}
+.good_title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.good_title text{
+  display: block;
+}

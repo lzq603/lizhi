@@ -1,0 +1,51 @@
+/* pages/add_good/add_good.wxss */
+page{
+  background-color: #eeeeee;
+}
+/*商品名称、描述*/
+
+.title{
+  background-color:#fefefe;
+  padding:16rpx;
+}
+.title input{
+  height: 100rpx;
+}
+
+/*价格*/
+
+.form_item{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_item text{
+  width:160rpx;
+}
+.form_item input{
+  text-align: right;
+  width: 300rpx;
+}
+picker{
+  padding: 25.5rpx;
+}
+/*确定按钮*/
+button{
+  background-color: red;
+  border: solid 30rpx white;
+  position: fixed;
+  bottom:0;
+  color: white;
+  width: 100%;
+  font-family: "微软雅黑" 
+}
+
+#fill{
+  height: 60px;
+  border: solid 30rpx white;
+  bottom:0;
+  color: white;
+  width: 100%;
+  font-family: "微软雅黑" 
+}

@@ -1,0 +1,15 @@
+/*用户头像*/
+.head{
+  width:100rpx;
+  height:100rpx;
+  border-radius:50rpx;
+}
+/*分割线*/
+.divide_line{
+  border: solid 2rpx #eeeeee;
+}
+/*不明显字体*/
+.noemphasize{
+  font-size:28rpx;
+  color:#8a8a8a;
+}

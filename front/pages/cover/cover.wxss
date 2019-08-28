@@ -1,0 +1,29 @@
+/* pages/cover/cover.wxss */
+.outline{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 1000rpx;
+}
+image{
+  width: 30%;
+}
+button{
+  background-color: yellow;
+  border-radius: 50rpx;
+  color: black;
+  width: 250rpx;
+}
+button::after{
+  border-radius: 50rpx;
+}
+.protocol{
+  font-size: 32rpx;
+  color: #8a8a8a;
+  margin: 50rpx 0;
+}
+.protocol text{
+  color: blueviolet;
+  text-decoration: underline;
+}

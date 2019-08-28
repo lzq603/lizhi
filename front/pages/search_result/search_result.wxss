@@ -1,0 +1,64 @@
+/* pages/search_result/search_result.wxss */
+page{
+  background-color: #eeeeee;
+}
+.search_box{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 10rpx;
+}
+input{
+  background-color: #eeeeee;
+  width: 730rpx;
+  height: 40rpx;
+  padding: 15rpx;
+  border-radius: 15rpx;
+}
+.options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  padding: 16rpx;
+  font-family: '微软雅黑';
+  color: #8a8a8a;
+  border-bottom: solid 4rpx #eeeeee;
+}
+
+.good_box{
+  width: 370rpx;
+  display:inline-block;
+  padding: 3rpx;
+  background-color: white;
+}
+.good_box image{
+  width: 370rpx;
+  height: 300rpx;
+}
+.good_box .name{
+  padding: 16rpx;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8rpx;
+  align-items: center;
+}
+.catagory{
+  background-color: white;
+  padding: 0 30rpx;
+}
+.catagory view{
+  padding: 20rpx;
+  color: #8a8a8a;
+}
+.catagory .selected{
+  color: black;
+  font-weight: bold;
+}

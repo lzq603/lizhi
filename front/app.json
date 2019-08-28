@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/cover/cover",
+    "pages/feedback/feedback",
+    "pages/add_good/add_good",
+    "pages/about/about",
+    "pages/me/me",
+    "pages/index/index",
+    "pages/update_userInfo/update_userInfo",
+    "pages/good/good",
+    "pages/msg/msg",
+    "pages/protocol/protocol",
+    "pages/find/find",
+    "pages/search_result/search_result",
+    "pages/released_goods/released",
+    "pages/chat/chat",
+    "pages/update_userInfo/stuid/stuid",
+    "pages/update_userInfo/nick/nick",
+    "pages/update_userInfo/addr/addr",
+    "pages/update_userInfo/phone/phone",
+    "pages/collected_goods/collected",
+    "pages/update_good/update_good",
+    "pages/shopchart/shopchart"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff534d",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "栗知市场",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/image/home.png",
+        "selectedIconPath": "/image/home_selected.png"
+      },
+      {
+        "pagePath": "pages/shopchart/shopchart",
+        "text": "购物车",
+        "iconPath": "/image/shopcart.png",
+        "selectedIconPath": "/image/shopcart_selected.png"
+      },
+      {
+        "pagePath": "pages/msg/msg",
+        "text": "消息",
+        "iconPath": "/image/message.png",
+        "selectedIconPath": "/image/message_selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/image/person.png",
+        "selectedIconPath": "/image/person_selected.png"
+      }
+    ],
+    "color": "#8a8a8a",
+    "selectedColor": "red"
+  }
+}
